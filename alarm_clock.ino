@@ -111,7 +111,7 @@ if(now.hour()>=12 && editAlarm==false){
 if(now.minute()==cooldown)cooldown=-1;
   
 //Check if alarm is ringing
-if(now.hour()==alarmHour && now.minute()==alarmMinute && editAlarm==false && cooldown==-1)alarmRinging=true;
+if(now.hour()==alarmHour && now.minute()==alarmMinute && editAlarm==false && cooldown==-1 && activeAlarm==true)alarmRinging=true;
 
 //Do following when alarm is activated (Example just prints RING to s7s)
 if(alarmRinging==true) sprintf(tempString, "RING");
